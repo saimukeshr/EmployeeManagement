@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customentry="clr-namespace:EmployeeManagement.CustomControls"
+             x:Class="EmployeeManagement.Views.RegistrationPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="20,50,20,20">
+            <Label Text="Registration Page"
+                   HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Black" />
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                <customentry:MyEntry Placeholder="Enter Your First Name" x:Name="FirstName" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                <customentry:MyEntry Placeholder="Enter Your Last Name" x:Name="LastName" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                <customentry:MyEntry Placeholder="Email" x:Name="emailid" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                <customentry:MyEntry Placeholder="ContactNo" x:Name="ContactNo" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30" HeightRequest="50" Padding="0" Margin="0,15,0,0">
+                <Picker x:Name="Departmentpicker" Title="Select your Department" Margin="15,0,0,0" SelectedIndexChanged="Departmentpicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>ExecutiveTeam</x:String>
+                            <x:String>SalesTeam</x:String>
+                            <x:String>PurchaseTeam</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30" HeightRequest="50" Padding="0" Margin="0,15,0,0">
+                <Picker x:Name="Levelpicker" Title="Select your Level" Margin="15,0,0,0" SelectedIndexChanged="Levelpicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Manager</x:String>
+                            <x:String>TeamMember</x:String>
+                            
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                    <customentry:MyEntry Placeholder="Username" x:Name="Entryusername" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                    <customentry:MyEntry Placeholder="Password" x:Name="Entrypassword" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                <customentry:MyEntry Placeholder="Password" IsPassword="True" x:Name="EntryConfirmPassword" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+            </Frame>
+            <Button Text="SignUp" CornerRadius="30" FontSize="16" FontAttributes="Bold" HeightRequest="50" Margin="0,30,0,0" Command="{Binding Signupcommand}">
+            </Button>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

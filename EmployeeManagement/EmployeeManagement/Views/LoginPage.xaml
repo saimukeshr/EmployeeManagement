@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:customentry="clr-namespace:EmployeeManagement.CustomControls"
+             x:Class="EmployeeManagement.Views.LoginPage">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+             <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
+                <Label Text="WELCOME" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                <Label Text="Enter your details to Login" TextColor="Black" FontSize="18" Padding="10" HorizontalOptions="Center"></Label>
+                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
+                    <customentry:MyEntry Placeholder="UserName" x:Name="Entryusername" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
+                </Frame>
+
+                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30"  Padding="0" Margin="0,15,0,0">
+                    <customentry:MyEntry Placeholder="Password" x:Name="Entrypassword" HeightRequest="50" Margin="10,0,0,0" TextColor="Black"></customentry:MyEntry>
+                </Frame>
+
+                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30" HeightRequest="50" Padding="0" Margin="0,15,0,0">
+                    <Picker x:Name="picker" Title="Select your Department" Margin="15,0,0,0" SelectedIndexChanged="picker_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>ExecutiveTeam</x:String>
+                                <x:String>SalesTeam</x:String>
+                                <x:String>PurchaseTeam</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                </Frame>
+                <Label Text="Forgot Password?" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="End" Margin="0,15,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ForgotPasswordTapped}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Text="Login" CornerRadius="30" FontSize="16" FontAttributes="Bold" HeightRequest="50" Margin="0,30,0,0" Command="{Binding LoginCommand}" >
+                </Button>
+                <Label Text="or create a account u.." FontSize="16" Margin="0,10,0,0" TextColor="White" HorizontalOptions="Center">
+                </Label>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                    <Label Text="Dont have an account" FontSize="16" ></Label>
+                    <Label Text="Signup" TextColor="DarkSlateBlue" FontSize="16" FontAttributes="Bold" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SignUpTapCommand}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
