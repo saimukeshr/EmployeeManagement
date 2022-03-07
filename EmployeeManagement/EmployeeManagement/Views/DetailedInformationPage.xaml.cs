@@ -15,8 +15,8 @@ namespace EmployeeManagement.Views
     {
         public DetailedInformationPage(EmployeeList employee)
         {
-            if (employee == null)
-             throw new ArgumentNullException();
+            //if (employee == null)
+            // throw new ArgumentNullException();
 
             BindingContext = employee;
             InitializeComponent();

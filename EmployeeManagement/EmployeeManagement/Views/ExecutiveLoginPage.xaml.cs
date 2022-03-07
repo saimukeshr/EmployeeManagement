@@ -15,32 +15,23 @@ namespace EmployeeManagement.Views
     public partial class ExecutiveLoginPage : MasterDetailPage
     {
         
-        protected override bool OnBackButtonPressed() => false;
+        protected override bool OnBackButtonPressed() => true;
         private EmployeeList employee;
-
-
-
-
         public ExecutiveLoginPage()
-        {
-           
-            InitializeComponent();
-            
+        {        
+            InitializeComponent();           
         }
 
         private void Attendance_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new AttendancePage());
             IsPresented = false;
-
         }
-
         private void TeamPage_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new TeamsInformationPage());
             IsPresented = false;
         }
-
         private void Detailedinfo_Clicked(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new DetailedInformationPage(employee));
