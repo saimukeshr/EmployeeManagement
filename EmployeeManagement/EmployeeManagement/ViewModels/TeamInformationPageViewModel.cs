@@ -13,16 +13,16 @@ namespace EmployeeManagement.ViewModels
 
         public TeamInformationPageViewModel()
         {
-            PurchaseteamCommand = new Command(() => onpurchasepagecommand());
-            SalesteamCommand = new Command(() => onsalespagecommand());
+            PurchaseteamCommand = new Command(() => Onpurchasepagecommand());
+            SalesteamCommand = new Command(() => Onsalespagecommand());
         }
 
-        private async void onsalespagecommand()
+        private async void Onsalespagecommand()
         {
             await App.Current.MainPage.Navigation.PushAsync(new SalesTeamPage());
         }
 
-        private async void onpurchasepagecommand()
+        private async void Onpurchasepagecommand()
         {
             await App.Current.MainPage.Navigation.PushAsync(new PurchaseTeamPage());
         }

@@ -13,10 +13,12 @@ namespace EmployeeManagement.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegistrationPage : ContentPage
     {
+        protected override bool OnBackButtonPressed() => true;
         public RegistrationPage()
         {
             InitializeComponent();
             BindingContext = new RegistrationPageViewModel();
+
         }
 
         private void Levelpicker_SelectedIndexChanged(object sender, EventArgs e)

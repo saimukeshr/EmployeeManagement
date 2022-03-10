@@ -1,56 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:customentry="clr-namespace:EmployeeManagement.CustomControls"
-             x:Class="EmployeeManagement.Views.LoginPage">
-    
+             xmlns:viewmodels="clr-namespace:EmployeeManagement.ViewModels" x:DataType="viewmodels:LoginPageViewModel"
+             x:Class="EmployeeManagement.Views.LoginPage"
+             xmlns:local="clr-namespace:EmployeeManagement"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#f7f7f7">
     
     <ContentPage.Content>
         <StackLayout>
-             <StackLayout Padding="30" VerticalOptions="CenterAndExpand">
-                <Label Text="WELCOME" TextColor="Black" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"></Label>
-                <Label Text="Enter your details to Login" TextColor="Black" FontSize="18" Padding="10" HorizontalOptions="Center"></Label>
-                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black"  CornerRadius="30" Padding="0" Margin="0,15,0,0">
-                    <customentry:MyEntry Placeholder="UserName" x:Name="Entryusername" HeightRequest="50" Margin="10,0,0,0" VerticalOptions="Center" TextColor="Black"></customentry:MyEntry>
-                </Frame>
+            <StackLayout Padding="20,70,20,10" VerticalOptions="CenterAndExpand">
+                <Image Source="{local:ImageResource EmployeeManagement.Images.Team.jpg}" HorizontalOptions="Center"></Image>
+                <Label Text="EM"  FontAttributes="Italic" TextColor="#3c4955" FontSize="30" HorizontalOptions="Center"></Label>
+                <Label Text="Sign in" TextColor="#3c4955" FontSize="18" Margin="10,40,0,0"></Label>
+                <Entry Placeholder="USERNAME" Text="{Binding EntryUsername}" Opacity="10" FontSize="16" HeightRequest="40" Margin="10,30,0,0" VerticalOptions="Center" TextColor="#35384a"></Entry>
+                <Entry Placeholder="PASSWORD" Text="{Binding Entrypassword}" Opacity="10" FontSize="16" HeightRequest="40" Margin="10,20,0,0" TextColor="#35384a"></Entry>
+                <Picker x:Name="picker" Title="DEPARTMENT" FontSize="16" Opacity="10" Margin="10,15,0,0" TextColor="#35384a" SelectedIndexChanged="picker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>ExecutiveTeam</x:String>
+                            <x:String>SalesTeam</x:String>
+                            <x:String>PurchaseTeam</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
-                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30"  Padding="0" Margin="0,15,0,0">
-                    <customentry:MyEntry Placeholder="Password" x:Name="Entrypassword" HeightRequest="50" Margin="10,0,0,0" TextColor="Black"></customentry:MyEntry>
-                </Frame>
-
-                <Frame BackgroundColor="WhiteSmoke" BorderColor="Black" CornerRadius="30" HeightRequest="50" Padding="0" Margin="0,15,0,0">
-                    <Picker x:Name="picker" Title="Select your Department" Margin="15,0,0,0" SelectedIndexChanged="picker_SelectedIndexChanged">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>ExecutiveTeam</x:String>
-                                <x:String>SalesTeam</x:String>
-                                <x:String>PurchaseTeam</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-
-                </Frame>
-                <Label Text="Forgot Password?" TextColor="Black" FontAttributes="Bold" FontSize="16" HorizontalOptions="End" Margin="0,15,0,0">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ForgotPasswordTapped}"></TapGestureRecognizer>
-                    </Label.GestureRecognizers>
-                </Label>
-                <Button Text="Login" CornerRadius="30" FontSize="16" FontAttributes="Bold" HeightRequest="50" Margin="0,30,0,0" Command="{Binding LoginCommand}" >
+                <Button Text="Login" BackgroundColor="#3c4955" TextColor="White"  BorderWidth="2" CornerRadius="30" FontSize="16"  HeightRequest="45" Margin="0,30,0,65" Command="{Binding LoginCommand}" >
                 </Button>
-                <Label Text="or create a account u.." FontSize="16" Margin="0,10,0,0" TextColor="White" HorizontalOptions="Center">
-                </Label>
-                
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
-                    <Label Text="Dont have an account" FontSize="16" ></Label>
-                    <Label Text="Signup" TextColor="DarkSlateBlue" FontSize="16" FontAttributes="Bold" >
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
+
+                    <Label Text="Dont have an account ?" HorizontalOptions="Start" TextColor="#35384a" FontSize="16"  >
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding SignUpTapCommand}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Forgot Password" HorizontalOptions="EndAndExpand"  TextColor="#35384a"  FontSize="16" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ForgotPasswordTapped}"></TapGestureRecognizer>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
-
-
     </ContentPage.Content>
 </ContentPage>
