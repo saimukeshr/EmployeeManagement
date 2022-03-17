@@ -17,14 +17,14 @@ namespace EmployeeManagement.Views
         {
             InitializeComponent();
 
-            salesteamlist.ItemsSource = new List<EmployeeList>
+            salesteamlist.ItemsSource = new List<Employee>
             {
-                new EmployeeList {Name = "James", Status="Manager" },
-                new EmployeeList {Name ="Benjamin", Status="TeamMember"},
-                new EmployeeList {Name ="Lucas", Status="TeamMember"},
-                new EmployeeList {Name ="Henry", Status="TeamMember"},
-                new EmployeeList {Name ="Alexander", Status="TeamMember"},
-                new EmployeeList {Name ="Harper", Status="TeamMember"}
+                new Employee {Name = "James", Status="Manager" },
+                new Employee {Name ="Benjamin", Status="TeamMember"},
+                new Employee {Name ="Lucas", Status="TeamMember"},
+                new Employee {Name ="Henry", Status="TeamMember"},
+                new Employee {Name ="Alexander", Status="TeamMember"},
+                new Employee {Name ="Harper", Status="TeamMember"}
             };
         }
 
@@ -33,8 +33,8 @@ namespace EmployeeManagement.Views
             if (e.SelectedItem == null)
                 return;
 
-            var employee = e.SelectedItem as EmployeeList;
-            await Navigation.PushAsync(new DetailedInformationPage(employee));
+            var employee = e.SelectedItem as Employee;
+            await Navigation.PushAsync(new DetailedInformationPage());
             salesteamlist.SelectedItem = null;
         }
     }

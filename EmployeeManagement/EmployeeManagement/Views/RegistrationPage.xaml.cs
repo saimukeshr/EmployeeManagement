@@ -23,7 +23,7 @@ namespace EmployeeManagement.Views
 
         private void Levelpicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //var Levelpicker = (Picker)sender;
+            
             var LevelPicker = Levelpicker.Items[Levelpicker.SelectedIndex];
         }
 
@@ -33,17 +33,7 @@ namespace EmployeeManagement.Views
         }
         private void Button_Clicked(object sender, EventArgs e)
         {
-            //Application.Current.Properties["Firstname"] = FirstName.Text;
-            //Application.Current.Properties["Lastname"] = LastName.Text;
-            //Application.Current.Properties["Emailid"] = emailid.Text;
-            //Application.Current.Properties["ContactNo"] = ContactNo.Text;
-            //Application.Current.Properties["Username"] = Username.Text;
-            //Application.Current.Properties["Password"] = Password.Text;
-            //Application.Current.Properties["ConfirmPassword"] = ConfirmPassword.Text;
-            //Application.Current.Properties["DepartmentPicker"] = Departmentpicker;
-            //Application.Current.Properties["LevelPicker"] = Levelpicker;
-            //DisplayAlert("", "Registration Successful!", "OK");
-            //Navigation.PopAsync();
+           
         }
 
      

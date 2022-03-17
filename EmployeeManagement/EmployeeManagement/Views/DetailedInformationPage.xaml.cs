@@ -13,13 +13,14 @@ namespace EmployeeManagement.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailedInformationPage : ContentPage
     {
-        public DetailedInformationPage(EmployeeList employee)
+        public DetailedInformationPage()
         {
-            //if (employee == null)
-            // throw new ArgumentNullException();
-
-            BindingContext = employee;
             InitializeComponent();
-        }
+            
+            var details = App.Database.GetEmployeeAsync().ToString();
+            EmployeeInfo.ItemsSource = details;
+     }
+        
+
     }
 }

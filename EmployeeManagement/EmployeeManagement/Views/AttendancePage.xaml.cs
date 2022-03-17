@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagement.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,13 @@ namespace EmployeeManagement.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AttendancePage : ContentPage
     {
+        
+
         public AttendancePage()
         {
             InitializeComponent();
-        }
+            BindingContext =  new AttendancePageViewModel();
 
-       
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            
         }
 
        

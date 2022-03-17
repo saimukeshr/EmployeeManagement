@@ -22,7 +22,6 @@ namespace EmployeeManagement.ViewModels
         public RegistrationPageViewModel()
         {
             employeeDetail = new Employee();
-
             Signupcommand = new Command<Employee>((obj) => onSignupCommand(obj));
             BacktoSignin = new Command(() => BacktoSigninPage());
         }

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customentry="clr-namespace:EmployeeManagement.CustomControls"
              x:Class="EmployeeManagement.Views.RegistrationPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             >
     <ContentPage.Content>
         <ScrollView>
             

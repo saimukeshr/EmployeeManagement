@@ -17,8 +17,7 @@ namespace EmployeeManagement.Models
         public string Department { get; set; }
         public string Level { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }
-      
+        public string Password { get; set; }    
         public string Date { get; set; }
         public string StartTime { get; set; }
         public string EndTime { get; set; }

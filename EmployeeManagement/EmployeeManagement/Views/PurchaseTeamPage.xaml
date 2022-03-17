@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EmployeeManagement.Views.PurchaseTeamPage">
+             x:Class="EmployeeManagement.Views.PurchaseTeamPage"
+             Title="PURCHASE TEAM">
+ 
     <ContentPage.Content>
-        <ListView x:Name="purchaseteamlist" ItemSelected="purchaseteamlist_ItemSelected" RowHeight="50" >
+        <ListView x:Name="purchaseteamlist" ItemSelected="purchaseteamlist_ItemSelected" RowHeight="65" Margin="20,08,0,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell  Text="{Binding Name}" Detail="{Binding Status}"/>
+                    <ViewCell>
+                    <StackLayout >
+                        <Label Text="{Binding Name}" TextColor="Black" FontSize="18"></Label>
+                        <Label Text="{Binding Status}" TextColor="Gray"></Label>
+                    </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

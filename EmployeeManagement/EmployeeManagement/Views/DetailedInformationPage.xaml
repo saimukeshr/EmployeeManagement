@@ -4,12 +4,29 @@
              x:Class="EmployeeManagement.Views.DetailedInformationPage"
              Title="{Binding Name}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Name}"></Label>
-            <Label Text="{Binding Status}"></Label>
-            <Label Text="{Binding TimeIn}"></Label>
-            <Label Text="{Binding TimeOut}"></Label>
-
-        </StackLayout>
+        <ListView x:Name="EmployeeInfo">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="20,10,10,10">
+                            <Label Text="{Binding FirstName}" TextColor="Black" FontSize="22"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Date" TextColor="Black" FontSize="16"></Label>
+                                <Label Text="{Binding Date}"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="TimeIn" TextColor="Black" FontSize="16"></Label>
+                                <Label Text="{Binding TimeIn}"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="TimeOut" TextColor="Black" FontSize="16"></Label>
+                                <Label Text="{Binding TimeOut}"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
     </ContentPage.Content>
 </ContentPage>

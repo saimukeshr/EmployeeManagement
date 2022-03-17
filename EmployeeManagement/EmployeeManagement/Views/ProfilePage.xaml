@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeManagement.Views.ProfilePage">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="Gradient.jpg" Grid.Row="0" Grid.RowSpan="2" Aspect="AspectFill" Opacity="0.7"/>
+            <Image Source="profileimage.png" Grid.Row="1" HeightRequest="120" HorizontalOptions="Center" />
+            <StackLayout Grid.Row="2" Margin="5,4,4,0">
+                <Label Text="First Name" TextColor="Gray" FontSize="15"/>
+                <Label Text="{Binding FirstName}" HeightRequest="25" FontSize="16" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Margin="5,4,4,0">
+                <Label Text="Last Name" TextColor="Gray" FontSize="15"/>
+                <Label Text="{Binding LastName}" HeightRequest="25" FontSize="16" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Grid.Row="4" Margin="5,4,4,0" >
+                <Label Text="Email" TextColor="Gray" FontSize="15"/>
+                <Label Text="{Binding Email}" HeightRequest="25" FontSize="16" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Grid.Row="5" Margin="5,4,4,0">
+                <Label Text="ContactNo" TextColor="Gray" FontSize="15"/>
+                <Label Text="{Binding Email}" HeightRequest="25" FontSize="16" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Grid.Row="6" Margin="5,4,4,4">
+                <Label Text="Employee ID" TextColor="Gray" FontSize="15"/>
+                <Label Text="{Binding EmployeeID}" HeightRequest="25" FontSize="16" TextColor="Black"/>
+            </StackLayout>
+            <BoxView Grid.Row="7" HeightRequest="1" Opacity="0.3" Color="Black"></BoxView>
+            <Label Grid.Row="8" Margin="8,4,4,0" HeightRequest="30" Text="Update Details" FontSize="18"  TextColor="Black"/>
+            <BoxView Grid.Row="9" HeightRequest="1" Opacity="0.3" Color="Black"></BoxView>
+            <Label Grid.Row="10" Margin="8,4,4,0" HeightRequest="30" Text="Change Password" FontSize="18" TextColor="Black"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

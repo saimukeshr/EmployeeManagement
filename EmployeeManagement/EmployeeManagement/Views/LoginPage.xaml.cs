@@ -1,6 +1,8 @@
-﻿using EmployeeManagement.ViewModels;
+﻿using EmployeeManagement.Models;
+using EmployeeManagement.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,15 +18,10 @@ namespace EmployeeManagement.Views
         public LoginPage()
         {
             InitializeComponent();
-            BindingContext = new LoginPageViewModel();
+            BindingContext = new LoginPageViewModel(); ;
+           
         }
-
-      
-        private void picker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-       
+    
+        
     }
 }

@@ -1,5 +1,4 @@
-﻿using EmployeeManagement.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace EmployeeManagement.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TeamsInformationPage : ContentPage
+    public partial class ProfilePage : ContentPage
     {
-        public TeamsInformationPage()
+        public ProfilePage()
         {
             InitializeComponent();
-            BindingContext = new TeamInformationPageViewModel();
         }
-
-        
     }
 }

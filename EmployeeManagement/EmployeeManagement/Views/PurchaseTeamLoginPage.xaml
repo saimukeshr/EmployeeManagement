@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeeManagement.Views.PurchaseTeamLoginPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="MasterPage">
+            <ContentPage.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Source="Gradient.jpg" Opacity="0.6" Aspect="AspectFill">
+
+                    </Image>
+                    <StackLayout Grid.Row="1" Orientation="Horizontal" Grid.Column="2" Grid.ColumnSpan="1">
+                        <Label Text="Hello, " TextColor="White" FontSize="25"></Label>
+                        <Label x:Name="Username" FontSize="25" TextColor="White">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Grid.Row="2" Grid.ColumnSpan="3">
+                        <Label Text="Menu" TextColor="CadetBlue" FontSize="20" HorizontalTextAlignment="Center" Margin="0,15,0,0"></Label>
+                        <Button x:Name="HomePage" Text="HomePage" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Margin="5,0,0,0" Clicked="HomePage_Clicked"  ></Button>
+                        <Button x:Name="Attendance" Text="Attendance" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Margin="5,0,0,0" Clicked="Attendance_Clicked"  ></Button>
+                        <Button x:Name="PurchaseTeam" Text="Team Page" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Margin="5,0,0,0" Clicked="PurchaseTeam_Clicked" ></Button>
+                        <Button x:Name="Detailedinfo" Text="Detailed Info" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Clicked="Detailedinfo_Clicked" Margin="5,0,0,0" ></Button>
+                        <Button x:Name="Profile" Text="Profile" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20" Clicked="Profile_Clicked" Margin="5,0,0,0" ></Button>
+                        <Button x:Name="Singut" Text="Sign Out" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20" Margin="5,0,0,0" Clicked="Singut_Clicked" ></Button>
+                    </StackLayout>
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <ContentPage Title="Purchase Team">
+
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

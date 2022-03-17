@@ -10,21 +10,12 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="20,70,20,10" VerticalOptions="CenterAndExpand">
-                <Image Source="{local:ImageResource EmployeeManagement.Images.Team.jpg}" HorizontalOptions="Center"></Image>
+                <Image Source="Icon.jpg" HorizontalOptions="Center"></Image>
                 <Label Text="EM"  FontAttributes="Italic" TextColor="#3c4955" FontSize="30" HorizontalOptions="Center"></Label>
                 <Label Text="Sign in" TextColor="#3c4955" FontSize="18" Margin="10,40,0,0"></Label>
                 <Entry Placeholder="USERNAME" Text="{Binding EntryUsername}" Opacity="10" FontSize="16" HeightRequest="40" Margin="10,30,0,0" VerticalOptions="Center" TextColor="#35384a"></Entry>
                 <Entry Placeholder="PASSWORD" Text="{Binding Entrypassword}" Opacity="10" FontSize="16" HeightRequest="40" Margin="10,20,0,0" TextColor="#35384a"></Entry>
-                <Picker x:Name="picker" Title="DEPARTMENT" FontSize="16" Opacity="10" Margin="10,15,0,0" TextColor="#35384a" SelectedIndexChanged="picker_SelectedIndexChanged">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>ExecutiveTeam</x:String>
-                            <x:String>SalesTeam</x:String>
-                            <x:String>PurchaseTeam</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-
+                <Picker  Title="DEPARTMENT" ItemsSource="{Binding Departments}" FontSize="16" Opacity="10" Margin="10,15,0,0" TextColor="#35384a" SelectedItem="{Binding Selecteddepartment}"></Picker>
                 <Button Text="Login" BackgroundColor="#3c4955" TextColor="White"  BorderWidth="2" CornerRadius="30" FontSize="16"  HeightRequest="45" Margin="0,30,0,65" Command="{Binding LoginCommand}" >
                 </Button>
                 <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">

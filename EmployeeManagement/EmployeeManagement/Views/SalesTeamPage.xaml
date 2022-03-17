@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EmployeeManagement.Views.SalesTeamPage">
+             x:Class="EmployeeManagement.Views.SalesTeamPage"
+             Title="SALES TEAM">
+    <!--<NavigationPage.TitleView>
+        <Label Text="SALES TEAM" TextColor="White" FontSize="20"/>
+    </NavigationPage.TitleView>-->
     <ContentPage.Content>
-        <ListView x:Name="salesteamlist" RowHeight="20" ItemSelected="salesteamlist_ItemSelected" HasUnevenRows="True" >
+        <ListView x:Name="salesteamlist" RowHeight="65" ItemSelected="salesteamlist_ItemSelected" Margin="20,08,0,10" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell  Text="{Binding Name}" Detail="{Binding Status}" />
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" TextColor="Black" FontSize="18"></Label>
+                            <Label Text="{Binding Status}" TextColor="Gray"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

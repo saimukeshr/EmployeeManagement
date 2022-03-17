@@ -23,12 +23,14 @@ namespace EmployeeManagement
             }
         }
 
+        public static string Username;
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage());
 
+           
         }
 
         
