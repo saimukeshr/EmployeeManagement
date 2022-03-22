@@ -9,25 +9,25 @@
             <ContentPage.Content>
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="30"/>
                         <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="90"/>
                         <ColumnDefinition Width="*"/>
                        
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
                         <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="20"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Source="Gradient.jpg" Opacity="0.6" Aspect="AspectFill">
-                        
-                    </Image>
-                    <StackLayout Grid.Row="1" Orientation="Horizontal" Grid.Column="2" Grid.ColumnSpan="1">
+                    <Image Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Source="Gradient.jpg" Opacity="0.6" Aspect="AspectFill"></Image>
+                    <StackLayout Grid.Row="1" Margin="40,0,40,0" Orientation="Horizontal" VerticalOptions="Center" Grid.Column="0" HorizontalOptions="Center" Grid.ColumnSpan="2">
                         <Label Text="Hello, " TextColor="White" FontSize="25"></Label>
-                        <Label x:Name="Username" FontSize="25" TextColor="White">
-                        </Label>
+                        <Label x:Name="Username" FontSize="25" TextColor="White"></Label>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical" Grid.Row="2" Grid.ColumnSpan="3">
+                    <Image Source="profileimage.png" Grid.Row="1" Grid.Column="2" HorizontalOptions="End"/>
+                    <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
                     <Label Text="Menu" TextColor="CadetBlue" FontSize="20" HorizontalTextAlignment="Center" Margin="0,15,0,0"></Label>
                     <Button x:Name="HomePage" Text="HomePage" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Margin="5,0,0,0" Clicked="HomePage_Clicked"  ></Button>
                     <Button x:Name="Attendance" Text="Attendance" BorderColor="Transparent" BackgroundColor="Transparent" HeightRequest="60" FontAttributes="Italic" FontSize="20"  Margin="5,0,0,0" Clicked="Attendance_Clicked"  ></Button>

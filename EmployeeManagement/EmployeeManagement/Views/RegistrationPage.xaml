@@ -44,7 +44,7 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Entry Placeholder="USERNAME" Text="{Binding  EmployeeDetail.Username}" x:Name="Entryusername" Opacity="10" FontSize="16" HeightRequest="40" Margin="00,15,0,0" TextColor="#35384a"></Entry>
+                <Entry Placeholder="EmployeeID" Text="{Binding  EmployeeDetail.EmployeeID}" x:Name="EmployeeID" Opacity="10" FontSize="16" HeightRequest="40" Margin="00,15,0,0" TextColor="#35384a"></Entry>
 
                 <Entry Placeholder="PASSWORD" Text="{Binding  EmployeeDetail.Password}" Opacity="10" FontSize="16" HeightRequest="40" Margin="00,15,0,0" TextColor="#35384a"></Entry>
 
